@@ -1,14 +1,12 @@
-const arr = [1,2,3];
+const users = [
+  {nome: 'Samir', idade:27},
+  {nome: 'Angela', idade:33},
+  {nome: 'Beatrice', idade:42}
+];
+  
+//const newUsersArray = users.filter(user => user.name !== 'Samir');
 
-//const smallerArr = arr.filter(number => number !== 2);
-//const incrementedArr = smallerArr.map(number => number + 1);
+// 'Samir tem 27 anos '
+const newUsersArray = users.map(user => `${user.nome} tem ${user.idade} anos`);
 
-//const smallerArr = arr.filter(number => number !== 2).map(number => number + 1);
-
-
-const smallerArr = arr
-    .filter(number => number !== 2);
-    .map(number => number + 1);
-
-
-console.log(incrementedArr); // => [2,4]
+console.log(newUsersArray);
