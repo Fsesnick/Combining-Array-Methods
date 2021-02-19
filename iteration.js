@@ -13,6 +13,7 @@ const users = [
 const usersObject = users.reduce((usersObject,user) => {
 
   usersObject[user.nome] = user.idade; 
+  return usersObject;
 },{});
 
 console.log(usersObject);
