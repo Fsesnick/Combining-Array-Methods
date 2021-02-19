@@ -4,9 +4,15 @@ const users = [
   {nome: 'Beatrice', idade:42}
 ];
   
-//const newUsersArray = users.filter(user => user.name !== 'Samir');
+/*
+  Samir: 27,
+  Angela: 33,
+  Beatrice: 42
 
-// 'Samir tem 27 anos '
-const newUsersArray = users.map(user => `${user.nome} tem ${user.idade} anos`);
+  */
+const usersObject = users.reduce((usersObject,user) => {
 
-console.log(newUsersArray);
+  usersObject[user.nome] = user.idade; 
+},{});
+
+console.log(usersObject);
